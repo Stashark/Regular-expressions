@@ -6,6 +6,7 @@ with open("phonebook_raw.csv", encoding="utf-8") as f:
     rows = csv.reader(f, delimiter=",")
     contacts_list = list(rows)
 
+
 # TODO 1: выполните пункты 1-3 ДЗ
 fix_contacts = []
 
@@ -30,7 +31,6 @@ for row in contacts_list:
     fix_contacts.append([lastname, firstname, surname] + row[3:])
 
 def is_phone(phone):
-    # Если поле пустое — возвращаем как есть, ничего не делаем
     if not phone:
         return phone
 
